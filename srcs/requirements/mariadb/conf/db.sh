@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mysql_install_db --user=mysql --datadir=/run/mysqld
+
 /etc/init.d/mariadb start
 
 mariadb -e "CREATE DATABASE $DB_NAME;

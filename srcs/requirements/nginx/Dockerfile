@@ -4,9 +4,7 @@ RUN apt-get update && \
 	apt-get install -y nginx && \
 	rm -rf /var/lib/apt/lists/*
 
-COPY ./conf/mynginx.conf /etc/nginx/sites-available/
-
-RUN ln -s /etc/nginx/sites-available/mynginx.conf /etc/nginx/sites-enabled/mynginx.conf
+COPY ./conf/mynginx.conf /etc/nginx/sites-available/default
 
 RUN apt update && \
 	apt install openssl -y && \

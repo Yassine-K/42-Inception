@@ -8,8 +8,8 @@ rebuild:
 	@docker-compose -f srcs/docker-compose.yml up -d --build
 
 clean:
-	@sudo rm -rf /home/ykhayri/data/maria/*
-	@sudo rm -rf /home/ykhayri/data/wordp/*
+	@sudo rm -rf /home/ykhayri/data/maria
+	@sudo rm -rf /home/ykhayri/data/wordp
 
 stop: clean
 	docker-compose -f srcs/docker-compose.yml down -v

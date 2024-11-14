@@ -10,4 +10,6 @@ wp db check --host=$DB_HOST --dbuser=$DB_USER --dbpass=$DB_PASS --allow-root
 
 wp core install --url=$URL --title=$TITLE --admin_user=$ADMIN_USER --admin_password=$ADMIN_PASS --admin_email=$ADMIN_EMAIL   --allow-root
 
+wp user create mosahih mosahih@student.1337.ma --role=editor --user_pass=1234567 --allow-root
+
 exec php-fpm8.2 -F
