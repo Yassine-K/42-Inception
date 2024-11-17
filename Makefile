@@ -4,7 +4,7 @@ all:
 	@docker-compose -f srcs/docker-compose.yml up -d --build
 
 rebuild:
-	@@docker-compose -f srcs/docker-compose.yml down -v
+	@docker-compose -f srcs/docker-compose.yml down -v
 	@docker-compose -f srcs/docker-compose.yml up -d --build
 
 clean:
@@ -20,4 +20,4 @@ fclean: stop
 re: fclean all
 
 .PHONY:
-	all clean fclean re
+	all clean fclean rebuild stop re
